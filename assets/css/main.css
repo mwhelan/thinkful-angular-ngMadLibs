@@ -1,0 +1,46 @@
+.container {
+    margin-top: 65px;
+    border: solid 7px;
+}
+
+header {
+    padding: 30px;
+}
+
+h1 {
+    font-size: 80px;
+    font-weight: bold;
+}
+
+.panel {
+    padding: 40px;
+    border-top: solid 7px;
+}
+
+input {
+    padding: 7px;
+    border: solid 3px;
+    font-size: 18px;
+    font-style: italic;
+}
+
+.libInput {
+    margin-top: 12px;
+}
+
+.panel-body span {
+    font-size: 1.3em;
+    display: inline;
+    padding: .2em .6em .3em;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+    background-color: #428bca;
+    color: white;
+}
+
+.panel-body p {
+    line-height: 40px;
+}

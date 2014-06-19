@@ -5,23 +5,111 @@
     <title>MadLibs</title>
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="plugins/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="http://jquery.bassistance.de/validate/demo/site-demos.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body>
-    <div class="container">
-        <header class="text-center">
-            <h1>Mad Libs</h1>
-        </header>
-    </div>
-    
+<body ng-app="">
+    <div class="container" ng-init="data={
+         femaleName: 'female name',
+         jobTitle: 'job title',
+         tediousTask: 'tedious task',
+         dirtyTask: 'dirty task',
+         celebrity: 'celebrity',
+         uselessSkill: 'useless skill',
+         obnoxiousCelebrity: 'obnoxious celebrity',
+         hugeNumber: 'huge number',
+         adjective: 'adjective'
+         }">
+        <div class="row">
+            <header>
+                <div class="col-sm-4 text-center">
+                    <img src="assets/images/mad-lib-happy-face.png" alt="MadLibs happy face" />
+                </div>
+
+                <div class="col-sm-8 text-center">
+                    <img src="assets/images/ng-mad-libs-logo.png" alt="MadLibs logo" />
+                    <h1>Automate This!</h1>
+                </div>
+            </header>
+        </div>
+
+        <!-- word input-->
+        <div class="row">
+
+            <div class="panel">
+                <div class="panel-body">
+                    <h2>Provide the following words:</h2>
+                    <div class="col-sm-4">
+                        <div class="libInput">
+                            <input type="text" ng-model="data.femaleName" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.jobTitle" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.tediousTask" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="libInput">
+                            <input type="text" ng-model="data.dirtyTask" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.celebrity" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.uselessSkill" />
+                        </div>
+                    </div>
+
+                    <div class="col-sm-4">
+                        <div class="libInput">
+                            <input type="text" ng-model="data.obnoxiousCelebrity" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.hugeNumber" />
+                        </div>
+                        <div class="libInput">
+                            <input type="text" ng-model="data.adjective" />
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- /panel -->
+        </div><!-- /word input-->
+        <!-- MadLibs story -->
+        <div class="row">
+            <form>
+                <div class="panel">
+                    <div class="panel-body">
+                        <p>
+                            <span>{{data.femaleName}}</span> was a <span>{{data.jobTitle}}</span> who loved technology.
+                            Although she loved parts of her job, she absolutely hated <span>{{data.tediousTask}}</span> and
+                            <span>{{data.dirtyTask}}</span>. So, <span>{{data.femaleName}} </span> met with her life
+                            mentor <span>{{data.celebrity}}</span> who told her to learn how to <span>{{data.uselessSkill}}</span> with Thinkful.
+                            Thinkful didn't offer a course on <span>{{data.uselessSkill}}</span> so she studied programming instead.
+                        </p>
+
+                        <p>
+                            What a great decision! With her new skills, <span>{{data.femaleName}}</span> built
+                            a(n) <span>{{data.adjective}}</span> robot named <span>{{data.obnoxiousCelebrity}}</span> that not only
+                            loved <span>{{data.dirtyTask}}</span> but did it <span>{{data.hugeNumber}}</span> faster.
+                        </p>
+                    </div><!-- /panel body -->
+                </div><!-- /panel -->
+            </form>
+        </div> <!-- /MadLibs story -->
+
+    </div> <!-- /container -->
+
     <!-- JavaScript -->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.min.js"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+    <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="http://jquery.bassistance.de/validate/jquery.validate.js"></script>
     <script src="http://jquery.bassistance.de/validate/additional-methods.js"></script>
+    <script src="assets/js/angular.min.js"></script>
     <script src="assets/js/app.js"></script>
 </body>
 </html>
