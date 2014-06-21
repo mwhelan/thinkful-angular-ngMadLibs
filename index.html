@@ -30,61 +30,80 @@
             <div class="panel">
                 <div class="panel-body">
                     <h2>Provide the following words:</h2>
-                    <div class="col-sm-4">
-                        <div class="libInput">
-                            <input type="text" ng-model="data.femaleName" />
-                        </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.jobTitle" />
-                        </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.tediousTask" />
-                        </div>
-                    </div>
-
-                    <div class="col-sm-4">
-                        <div class="libInput">
-                            <input type="text" ng-model="data.dirtyTask" />
-                        </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.celebrity" />
-                        </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.uselessSkill" />
+                    
+                    <div class="row">
+                        <div class="col-sm-3">
+                            <div class="input-group gender pull-left">
+                                <span class="input-group-addon">
+                                    <input type="radio" ng-model="gender.isFemale" ng-value="false">  Male
+                                </span>
+                                <span class="input-group-addon">
+                                    <input type="radio" ng-model="gender.isFemale" ng-value="true"> Female
+                                </span>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="col-sm-4">
-                        <div class="libInput">
-                            <input type="text" ng-model="data.obnoxiousCelebrity" />
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="libInput">
+                                <input type="text" ng-model="data.personName" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.jobTitle" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.tediousTask" />
+                            </div>
                         </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.hugeNumber" />
+
+                        <div class="col-sm-4">
+                            <div class="libInput">
+                                <input type="text" ng-model="data.dirtyTask" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.celebrity" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.uselessSkill" />
+                            </div>
                         </div>
-                        <div class="libInput">
-                            <input type="text" ng-model="data.adjective" />
+
+                        <div class="col-sm-4">
+                            <div class="libInput">
+                                <input type="text" ng-model="data.obnoxiousCelebrity" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.hugeNumber" />
+                            </div>
+                            <div class="libInput">
+                                <input type="text" ng-model="data.adjective" />
+                            </div>
                         </div>
                     </div>
+
                 </div>
             </div> <!-- /panel -->
         </div><!-- /word input-->
-        <!-- MadLibs story -->
+        
+    <!-- MadLibs story -->
         <div class="row">
             <form>
                 <div class="panel">
                     <div class="panel-body">
                         <p>
-                            <span>{{data.femaleName}}</span> was a <span>{{data.jobTitle}}</span> who loved technology.
-                            Although she loved parts of her job, she absolutely hated <span>{{data.tediousTask}}</span> and
-                            <span>{{data.dirtyTask}}</span>. So, <span>{{data.femaleName}} </span> met with her life
-                            mentor <span>{{data.celebrity}}</span> who told her to learn how to <span>{{data.uselessSkill}}</span> with Thinkful.
-                            Thinkful didn't offer a course on <span>{{data.uselessSkill}}</span> so she studied programming instead.
+                            <span class="highlight">{{data.personName}}</span> was a <span class="highlight">{{data.jobTitle}}</span> who loved technology.
+                            Although {{ gender.heShe() }} loved parts of {{ gender.hisHer() }} job, {{ gender.heShe() }} absolutely 
+                            hated <span class="highlight">{{data.tediousTask}}</span> and
+                            <span class="highlight">{{data.dirtyTask}}</span>. So, <span class="highlight">{{data.personName}} </span> met with {{ gender.hisHer() }} life
+                            mentor <span class="highlight">{{data.celebrity}}</span> who told {{ gender.himHer() }} to learn how to <span class="highlight">{{data.uselessSkill}}</span> with Thinkful.
+                            Thinkful didn't offer a course on <span class="highlight">{{data.uselessSkill}}</span> so {{ gender.heShe() }} studied programming instead.
                         </p>
 
                         <p>
-                            What a great decision! With her new skills, <span>{{data.femaleName}}</span> built
-                            a(n) <span>{{data.adjective}}</span> robot named <span>{{data.obnoxiousCelebrity}}</span> that not only
-                            loved <span>{{data.dirtyTask}}</span> but did it <span>{{data.hugeNumber}}</span> faster.
+                            What a great decision! With {{ gender.hisHer() }} new skills, <span class="highlight">{{data.personName}}</span> built
+                            a(n) <span class="highlight">{{data.adjective}}</span> robot named <span class="highlight">{{data.obnoxiousCelebrity}}</span> that not only
+                            loved <span class="highlight">{{data.dirtyTask}}</span> but did it <span class="highlight">{{data.hugeNumber}}</span> faster.
                         </p>
                     </div><!-- /panel body -->
                 </div><!-- /panel -->

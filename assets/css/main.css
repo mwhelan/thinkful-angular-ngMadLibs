@@ -24,11 +24,16 @@ input {
     font-style: italic;
 }
 
+.gender {
+    background-color: white;
+    margin: 40px;
+}
+
 .libInput {
     margin-top: 12px;
 }
 
-.panel-body span {
+.highlight {
     font-size: 1.3em;
     display: inline;
     padding: .2em .6em .3em;
