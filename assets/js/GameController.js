@@ -24,6 +24,8 @@
                 validation = "required";
             }
 
+            //var code = field + "-" + $scope.myForm[field].$error[validation];
+            //console.log(code);
             return $scope.myForm[field].$error[validation];
         };
 
@@ -43,7 +45,7 @@
                 celebrity: '',
                 uselessSkill: '',
                 obnoxiousCelebrity: '',
-                hugeNumber: null,
+                hugeNumber: 0,
                 adjective: ''
             };
         }
