@@ -87,8 +87,9 @@
                                 </div>
                                 <div class="form-group libInput" ng-class="{'has-error': hasError('hugeNumber', 'min')}">
                                     <input name="hugeNumber" class="form-control" type="number" required min="1" ng-model="data.hugeNumber" placeholder="huge number" />
-                                    <p class="error-message" ng-if="hasError('hugeNumber', 'min')">You did not enter a valid huge number</p>
-                                </div>
+                                    <p class="error-message" ng-if="hasError('hugeNumber', 'min')">You must enter a number greater than zero</p>
+                                    <p class="error-message" ng-if="hasError('hugeNumber')">You did not enter a valid huge number</p>
+                               </div>
                                 <div class="form-group libInput" ng-class="{'has-error': hasError('adjective')}">
                                     <input name="adjective" class="form-control" type="text" required ng-model="data.adjective" placeholder="adjective" />
                                     <p class="error-message" ng-if="hasError('adjective')">You did not enter a valid adjective</p>
@@ -97,6 +98,15 @@
                         </div>
 
                         <button type="submit" class="btn btn-primary" name="submitForm">Generate Mad Lib</button>
+                    
+                        <!--<ul>
+                            <li ng-repeat="(key, errors) in myForm.$error track by $index">
+                                <strong>{{ key }}</strong> errors
+                                <ul>
+                                    <li ng-repeat="e in errors">{{ e.$name }} has an error: <strong>{{ key }}</strong>.</li>
+                                </ul>
+                            </li>
+                        </ul>-->
 
                     </div> <!-- /panel body -->
                 </div> <!-- /panel -->
@@ -117,7 +127,7 @@
                     <p>
                         What a great decision! With {{ gender.hisHer() }} new skills, <span class="highlight">{{data.personName}}</span> built
                         a(n) <span class="highlight">{{data.adjective}}</span> robot named <span class="highlight">{{data.obnoxiousCelebrity}}</span> that not only
-                        loved <span class="highlight">{{data.dirtyTask}}</span> but did it <span class="highlight">{{data.hugeNumber}}</span> faster.
+                        loved <span class="highlight">{{data.dirtyTask}}</span> but did it <span class="highlight">{{data.hugeNumber}}</span> times faster.
                     </p>
                 
                     <button class="btn btn-success" name="resetForm" ng-click="reset()">Reset</button>
