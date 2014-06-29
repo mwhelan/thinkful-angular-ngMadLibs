@@ -58,3 +58,18 @@ button {
 .panel-body p {
     line-height: 40px;
 }
+
+.animation.ng-hide-add {
+  -webkit-transition-delay: 1.5s;
+  transition-delay: 1.5s;
+  opacity:0;
+}
+.animation.ng-hide-remove {
+  -webkit-transition:1.5s linear all;
+  transition:1.5s linear all;
+  display:block!important;
+  opacity:1;
+}
+.animation.ng-hide {
+  opacity:0;
+}

@@ -30,7 +30,7 @@
 
             <form name="myForm" ng-submit="submit()" novalidate>
                 <!-- form view -->
-                <div class="panel" ng-show="view == 'form'">
+                <div class="panel animation" ng-show="view == 'form'">
                     <div class="panel-body">
                         <h2>Provide the following words:</h2>
 
@@ -45,6 +45,8 @@
                                     </span>
                                 </div>
                             </div>
+                            <button class="btn btn-info" type="button" name="sampleData" ng-click="sampleData()">Sample data</button>
+
                         </div>
 
                         <div class="row">
@@ -113,7 +115,7 @@
             </form>
 
             <!-- story view -->
-            <div class="panel" ng-show="view == 'story'">
+            <div class="panel animation" ng-show="view == 'story'">
                 <div class="panel-body">
                     <p>
                         <span class="highlight">{{data.personName}}</span> was a <span class="highlight">{{data.jobTitle}}</span> who loved technology.
@@ -142,6 +144,7 @@
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="plugins/bootstrap-validator/js/bootstrapValidator.js"></script>
     <script src="assets/js/angular.min.js"></script>
+    <script src="assets/js/angular-animate.js"></script>
     <script src="assets/js/app.js"></script>
     <script src="assets/js/GameController.js"></script>
 </body>

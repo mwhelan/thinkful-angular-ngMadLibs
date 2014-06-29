@@ -24,8 +24,6 @@
                 validation = "required";
             }
 
-            //var code = field + "-" + $scope.myForm[field].$error[validation];
-            //console.log(code);
             return $scope.myForm[field].$error[validation];
         };
 
@@ -33,6 +31,7 @@
             $scope.data = getNewPerson();
             $scope.gender = new Gender(true);
 
+            $scope.submitted = false;
             $scope.view = "form"; // views are 'form' and 'story'
         }
 
@@ -47,6 +46,20 @@
                 obnoxiousCelebrity: '',
                 hugeNumber: 0,
                 adjective: ''
+            };
+        }
+
+        $scope.sampleData = function (event) {
+            $scope.data = {
+                personName: 'Jane',
+                jobTitle: 'CEO',
+                tediousTask: 'playing golf',
+                dirtyTask: 'getting ball from lake',
+                celebrity: 'Bill Cosby',
+                uselessSkill: 'knitting',
+                obnoxiousCelebrity: 'Peewee herman',
+                hugeNumber: 15,
+                adjective: 'amazing'
             };
         }
 });
